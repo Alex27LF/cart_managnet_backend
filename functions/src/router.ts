@@ -1,5 +1,6 @@
 import {Application} from 'express';
+import { listIntegrantes } from './controllers/integrante_controllers';
 
-export function routersIntegrante(app:Application) {
-    app.get('/api/Integrantes',);
+export function routes(app:Application) {
+    app.get('/api/integrante', listIntegrantes);
 }
