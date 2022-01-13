@@ -6,10 +6,11 @@ export interface Recibo {
     nombre :string,
     fecha :string,
     monto :number,
+    idIntegrante: string
 }
 
 export function Recibo(data :any, id?:string){
-    const { urlRecibo, nombre, fecha, monto } = data;
+    const { urlRecibo, nombre, fecha, monto, idIntegrante} = data;
 
     let object :Recibo = { 
         idRecibo :id,
@@ -17,6 +18,7 @@ export function Recibo(data :any, id?:string){
         nombre :nombre,
         fecha :fecha,
         monto :monto,
+        idIntegrante: idIntegrante
     };
     return object;
 }
