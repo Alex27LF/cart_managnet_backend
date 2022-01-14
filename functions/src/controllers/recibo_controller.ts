@@ -15,7 +15,7 @@ export async function listRecibos(req: Request, res: Response) {
 export async function consultarRecibo(req: Request, res: Response) {       
     try {        
         let id = req.params.id;
-        let snapshot = await db.collection("recibos").orderBy('idIntegrante').where("idIntegrante","==",id).get();
+        let snapshot = await db.collection("recibos").where("idIntegrante","==",id).get();
         return res.status(200).json(snapshot.docs.map(doc => Recibo(doc.data(), doc.id)));                
     } catch (err) {
         return handleError(res, err);
