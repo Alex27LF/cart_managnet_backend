@@ -26,7 +26,7 @@ export async function createRecibo(req: Request, res: Response) {
     try{                    
         const newRecibo = Recibo(req.body);
         //newFoto.fecha =  new Date().toISOString();
-        const reciboAdded = await db.collection("fotos").add(newRecibo);                                    
+        const reciboAdded = await db.collection("recibos").add(newRecibo);                                    
         return res.status(201).json(Respuesta(`Recibo agregado para el integrante ${newRecibo.idIntegrante}`, `El Recibo fue agregado correctamente con el id ${reciboAdded.id}`, newRecibo, 201));
     }
     catch(err){
