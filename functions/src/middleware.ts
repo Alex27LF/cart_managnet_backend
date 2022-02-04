@@ -43,13 +43,3 @@ export function isAuthorized(opts: { hasRole: Array<'admin' | 'gerente'>}) {
         return res.status(403).send(Respuesta('No autorizado','Usuario con el rol no autorizado',{role},403));
     }
  }
-
-
-
-
-
-
-
-
-
-
