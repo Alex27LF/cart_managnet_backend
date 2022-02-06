@@ -13,5 +13,4 @@ export function routes(app:Application) {
     app.get('/api/recibo/:id', consultarRecibo);
     
     app.post('/api/registro', registro);
-
 }
